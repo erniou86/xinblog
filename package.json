@@ -1,0 +1,24 @@
+{
+  "name": "xinblog",
+  "version": "1.0.0",
+  "description": "AI 驱动的开源博客平台（Cloudflare Workers + D1 + Hono）",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "db:init": "wrangler d1 execute xinblog-db --local --file=./migrations/0001_init.sql"
+  },
+  "dependencies": {
+    "hono": "^4.13.8",
+    "magic-string": "^0.30.10",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.9",
+    "wrangler": "^3.60.0"
+  }
+}
